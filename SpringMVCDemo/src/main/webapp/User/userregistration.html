@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center the registration frame */
+        body {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style the registration frame */
+        .reg-frame {
+            background-color: #ffffff;
+            width: 700px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            padding: 0 5px; 
+            text-align: left; 
+        }
+        
+        /* Welcome to Dabba.com */
+        h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Grid layout for labels and inputs */
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .input-group label, .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Styling for labels */
+        .input-group label {
+            text-align: left;
+            font-weight: bold;
+            background-color: #f9f9f9;
+            border: none;
+            padding: 0;
+        }
+
+        /* Full width input  */
+        .input-group input {
+            margin-bottom: 5px;
+        }
+
+        /* Style for section containers */
+        .section-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        /* Style for the login button */
+        .reg-btn {
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .reg-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Style for the Login text*/
+        a {
+            font-size: 14px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="reg-frame">
+        <h2>Welcome to Dabba.com</h2>
+        <h3>User Registration</h3><br>
+        <hr><br>
+        <form>
+            <fieldset class="section-box">
+                <legend>Personal Information</legend>
+                <div class="input-group">
+                    <label for="firstname">First Name:</label>
+                    <label for="middelname">Middle Name:</label>
+
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <input type="text" name="middelname" id="middelname" placeholder="Middle Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastname">Last Name:</label>
+                    <label for="dob">Date of Birth:</label>
+
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+            </fieldset>
+            <fieldset class="section-box">
+                <legend>Contact Details</legend>
+                <div class="input-group">
+                    <label for="mobileno">Mobile No:</label>
+                    <label for="emailaddress">Email Address:</label>
+
+                    <input type="text" name="mobileno" id="mobileno" placeholder="+91 xxxxxxxxxx" required>
+                    <input type="email" name="emailaddress" id="emailaddress" placeholder="Email Address" required>
+                </div>
+            </fieldset>
+            <fieldset class="section-box">
+                <legend>Address Details</legend>
+                <div class="input-group">
+                    <label for="city">City/Village:</label>
+                    <label for="district">District:</label>
+
+                    <input type="text" name="city" id="city" placeholder="City/Village" required>
+                    <input type="text" name="district" id="district" placeholder="District" required>
+                </div>
+                <div class="input-group">
+                    <label for="pincode">Pincode:</label>
+                    <label for="state">State:</label>
+
+                    <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
+                    <input type="text" name="state" id="state" placeholder="State" required>
+                </div>
+            </fieldset>
+            <button type="submit" class="reg-btn">Register</button>
+            <a href="login.html">Login</a>
+        </form>
+    </div> 
+</body>
+</html>
